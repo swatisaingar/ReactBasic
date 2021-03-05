@@ -6,19 +6,19 @@ import { View, Text,ScrollView } from 'react-native';
 
 import HomeScreen from '../LoginScreens/HomeScreen'
 import Tabview from '../Tabs/Tabview'
-import ForgotPassword from '../LoginScreens/ForgotPassword';
+import Logout from '../LoginScreens/Logout';
 
 
 const AppNavigator = createDrawerNavigator({
   HomeScreen: {
       screen: HomeScreen
     },
-    About: {
-      screen:  Tabview
+    Logout: {
+      screen:  Logout
     },
     Details:
     {
-      screen : ForgotPassword
+      screen : Tabview
 
     }
   },
@@ -26,7 +26,7 @@ const AppNavigator = createDrawerNavigator({
   {
     contentComponent: (props) =>
 <View style={{flex :1,height: 150}}>
-<Text>Header</Text>
+
 <ScrollView>
 <DrawerItems {...props} />
 </ScrollView>

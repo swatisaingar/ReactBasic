@@ -1,34 +1,3 @@
-// import React from 'react';
-// import  {Text, View} from 'react-native';
-// import { WebView } from 'react-native-webview';
-
-// export default class  Signup extends React.Component {
-
-//     render () {
-
-//         let userEmail=this.props.navigation.state.userEmail
-
-//     let params1=this.props.navigation.state.params.data
-
-
-//     return(
-//         <View style={{flex:1,backgroundColor:"orange"}}>
-
-//             <Text>
-
-//                 {userEmail}
-//             </Text>
-
-//             {/* <Text >{params1.name +' city is '+params1.city+' and his gmail id is '+params1.email + ' and he is from '+params1.state}
-//                  </Text> */}
-
-//             {/* <WebView  source={{uri:'https://www.google.com/'}}></WebView> */}
-//         </View>
-//     );
-
-//     }
-// }
-
 
 import React, { Component } from 'react'
 import {
@@ -39,14 +8,15 @@ import {
     ToastAndroid
 } from 'react-native';
 
-
 class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
             email:'',
             password:'',
-            stored:{}
+            stored:{},
+            initializing:true,
+            user:''
         };
     }
     
@@ -55,6 +25,10 @@ class SignUp extends Component {
     }
     handlepassword=(text)=>{
         this.setState({password:text})
+    }
+    
+    componentDidMount = () =>{
+      
     }
     render() {
         const data = { 
@@ -72,7 +46,6 @@ class SignUp extends Component {
             })
       .then(response => response.json())
       .then(json => {
-        //   this.setState({stored:json});
           this.props.navigation.navigate('HomeScreen',{id:json})
          });   
            

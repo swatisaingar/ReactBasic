@@ -51,7 +51,7 @@ class HomeScreen extends Component {
       console.log('sdjhvfsdjhvds',params)
         return (
             <ScrollView>
-              <NavigationDrawer/>
+              {/* <NavigationDrawer/> */}
             <View style={{ flex: 1, backgroundColor: 'white' }}> 
                 <Image source={{uri:'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'}} style={{width:'100%',height:150}}/>
                 <View style={{width:'80%',height:'25%',backgroundColor:'white',marginLeft:30,marginRight:30,position:'absolute',top:80,borderRadius:20}}>

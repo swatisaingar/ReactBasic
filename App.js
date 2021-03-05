@@ -9,6 +9,7 @@ import HomeScreen from './LoginScreens/HomeScreen';
 import Tab from './Tabs/Tabview';
 import NavigationDrawer from './NavigationDrawer/NavigationDrawerhead'
 //import all the screens we are going to switch 
+
 const App = createStackNavigator({
   //Constant which holds all the screens like index of any book 
   Splash: { screen: Splash }, 
@@ -19,7 +20,7 @@ const App = createStackNavigator({
 
     ForgotPassword:{ screen: ForgotPassword},
 
-    HomeScreen:{screen: HomeScreen},
+    HomeScreen:{screen: NavigationDrawer},
     Tabview : {screen : Tab},
     NavigationDrawer :{screen : NavigationDrawer},
   },
@@ -28,4 +29,5 @@ const App = createStackNavigator({
     initialRouteName: 'Splash',
   }
 );
+
 export default createAppContainer(App);
